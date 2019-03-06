@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="loadXMLDoc();">
+    <div>
+	<table class="table">
+	<caption>应用列表</caption>
+      <thead>
+        <tr>
+          <th>APPID</th>
+		  <th>GameID</th>
+          <th>名字</th>
+		  <th>游戏名字</th>
+		  <th>价格</th>
+		  <th>种类</th>
+		  <th>访问状态</th>
+          <th>类型</th>
+          <th>发售时间</th>
+        </tr>
+      </thead>
+		<tbody id="info">
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+		</tbody>
+	</table>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	function loadXMLDoc()
+	{
+		$.ajax({
+		 url: "http://cdn.tgp.qq.com/tgp/oss/pc_game_list.js",
+		 success: function(data){
+			var html = ''; 
+			data=data.substring(18,data.length-1);//截取字符串使字符串符合JSON格式
+			data=$.parseJSON(data);  //字符串转JSON
+			for(var item in data.data){ //遍历集合
+				html+="<tr><th scope='row'>"+item+"</th>";
+				html+="<td>"+data.data[item].game_id+"</td>";
+				html+="<td>"+data.data[item].name+"</td>";
+				html+="<td>"+data.data[item].game_name+"</td>";
+				html+="<td>"+data.data[item].original_price+"</td>";
+				var type=data.data[item].game_type
+				switch(type){
+				case 0:
+					type="游戏";
+					break;
+				case 1:
+					type="DLC";
+					break;
+				case 2:
+					type="游戏包";
+					break;
+				default:
+					type="default";
+					break;
+				}
+				html+="<td>"+data.data[item].category+"</td>";
+				html+="<td>"+data.data[item].open_state+"</td>";
+				html+="<td>"+type+"</td>";
+				html+="<td>"+data.data[item].publish_time+"</td>";
+				
+			}
+			//console.log(data.data[2000916]);
+			html+="</tr>"
+			$('#info').html(html);
+		  }
+		});
+	}
+	</script>
+  </body>
+</html>
