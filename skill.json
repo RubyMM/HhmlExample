@@ -1,0 +1,32 @@
+{
+    "格斗": {
+        "active": {
+            "三段斩": {
+                "img": "/1/01.png",
+                "description": "说明",
+                "chain": {
+                    "连锁1": "--01--02==说明",
+                    "连锁2": "value"
+                }
+            }，
+			"突进": {
+                "img": "/1/02.png",
+                "description": "说明",
+                "chain": {
+                    "连锁1": "--01--02==说明",
+                    "连锁2": "value"
+                }
+            }
+        },
+        "passive": {
+            "被动1": {
+                "img": "value",
+                "description": "被动说明"
+            },
+            "被动2": {
+                "img": "value",
+                "description": "value"
+            }
+        }
+    }
+}
