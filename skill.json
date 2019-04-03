@@ -1,53 +1,55 @@
 {
-    "active": [
-        {
-            "name": "三段斩",
-            "img": "/01.png",
-            "description": "说明1234",
-            "chain": [
-                "--01--02==说明",
-                "++01==说明"
-            ]
-        },
-        {
-            "name": "突进",
-            "img": "/01.png",
-            "description": "说明1234",
-            "chain": [
-                "--01--02==说明",
-                "++01==说明"
-            ]
-        },
-        {
-            "name": "圆舞",
-            "img": "/01.png",
-            "description": "说明1234",
-            "chain": [
-                "--01--02==说明",
-                "++01==说明"
-            ]
-        }
-    ],
-    "passive": [
-        {
-            "name": "被动1",
-            "img": "value",
-            "description": "value"
-        },
-        {
-            "name": "被动2",
-            "img": "value",
-            "description": "value"
-        },
-        {
-            "name": "被动3",
-            "img": "value",
-            "description": "value"
-        },
-        {
-            "name": "被动4",
-            "img": "value",
-            "description": "value"
-        }
-    ]
+    "0": {
+        "active": [
+            {
+                "name": "三段斩",
+                "img": "/01.png",
+                "description": "说明1234",
+                "chain": [
+                    "--01--02==说明",
+                    "++01==说明"
+                ]
+            },
+            {
+                "name": "三段斩",
+                "img": "/01.png",
+                "description": "说明1234",
+                "chain": [
+                    "--01--02==说明",
+                    "++01==说明"
+                ]
+            },
+            {
+                "name": "三段斩",
+                "img": "/01.png",
+                "description": "说明1234",
+                "chain": [
+                    "--01--02==说明",
+                    "++01==说明"
+                ]
+            }
+        ],
+        "passive": [
+            {
+                "name": "被动1",
+                "img": "value",
+                "description": "value"
+            },
+            {
+                "name": "被动1",
+                "img": "value",
+                "description": "value"
+            },
+            {
+                "name": "被动1",
+                "img": "value",
+                "description": "value"
+            },
+            {
+                "name": "被动1",
+                "img": "value",
+                "description": "value"
+            }
+        ]
+    }
 }
